@@ -1,5 +1,5 @@
 {
-  "name": "oneclick",
+  "name": "oneclickjs",
   "version": "1.0.0",
   "description": "One click js to support custom integrations",
   "main": "index.js",
