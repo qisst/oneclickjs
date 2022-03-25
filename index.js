@@ -1,7 +1,6 @@
 const oneClick = {
-    createCheckoutUrl({products, shippingMethods, totalPrice, currency, url, tax}) {
+    createCheckoutUrl(products, shippingMethods, totalPrice, currency, url, tax) {
         let oneClickProducts = products.map(product => {
-            console.log(product);
             let title = product.title.replaceAll('\'', '');
             let src = product.src.indexOf('&') !== -1? product.src.substring(0, product.src.indexOf('&')): product.src
             return {
@@ -27,7 +26,7 @@ const oneClick = {
 
         return 'https://tezcheckout.qisstpay.com/?identity-token='+identityToken+'&queryUrl='+queryUrl
     },
-    openCheckoutWindow({products, shippingMethods, totalPrice, currency, url, tax}) {
+    openCheckoutWindow(products, shippingMethods, totalPrice, currency, url, tax) {
         let oneClickLink = this.createUrl({products, shippingMethods, totalPrice, currency, url, tax});
 
         window.open(oneClickLink,'newwindow', 'height=670,width=1400,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,directories=no,status=no');
