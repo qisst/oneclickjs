@@ -1,16 +1,5 @@
 const oneClick = {
     createCheckoutUrl(products, shippingMethods, totalPrice, currency, url, tax) {
-        console.log("URL");
-        console.log(url);
-
-        console.log("Tax");
-        console.log(tax);
-
-        console.log("currency");
-        console.log(currency);
-
-        console.log("Total Price");
-        console.log(totalPrice);
 
         let oneClickProducts = products.map(product => {
             let title = product.title.replaceAll('\'', '');
